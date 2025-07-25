@@ -18,12 +18,13 @@ app.use(cors({
     }
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'] 
 }))
 
 app.use('/', router)
 
-const PORT = 3000
+const PORT = process.env.DB_PORT || 3000
 
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en: http://localhost:${PORT}`)

@@ -43,7 +43,7 @@ async function renewToken(clientUserId, res) {
   const [rows] = await db.execute('SELECT id_user FROM user WHERE id_user = ?', [clientUserId])
   if (rows.length > 0) {
     const newToken = jwt.sign({ id: clientUserId }, process.env.SECRET_KEY)
-    res.cookie('token', newToken, { httpOnly: true, sameSite: 'lax', secure: false, maxAge: 1000 * 60 * 60 * 24 * 30 })
+    res.cookie('token', newToken, { httpOnly: true, sameSite: 'none', secure: true, maxAge: 1000 * 60 * 60 * 24 * 30 })
     return res.json({ message: 'Renewed token', token: newToken, userId: clientUserId })
   }
   return null
@@ -54,7 +54,7 @@ async function createNewUser(res) {
   const id = crypto.randomUUID()
   await db.execute('INSERT INTO user (id_user) VALUES (?)', [id])
   const newToken = jwt.sign({ id }, process.env.SECRET_KEY)
-  res.cookie('token', newToken, { httpOnly: true, sameSite: 'lax', secure: false, maxAge: 1000 * 60 * 60 * 24 * 30 })
+  res.cookie('token', newToken, { httpOnly: true, sameSite: 'none', secure: true, maxAge: 1000 * 60 * 60 * 24 * 30 })
   return res.json({ message: 'New token created', token: newToken, userId: id })
 }
 
