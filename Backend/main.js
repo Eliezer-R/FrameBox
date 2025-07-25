@@ -24,7 +24,7 @@ app.use(cors({
 
 app.use('/', router)
 
-const PORT = 3000
+const PORT = procces.env.DB_PORT 3000
 
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en: http://localhost:${PORT}`)
