@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import SearchHome from './homeSearch'
 import fetchAll from './fetchAll'
 function Home () {
-  const url = 'http://localhost:3000'
+  const url = `${import.meta.env.VITE_API_URL}/`
   const method = 'POST'
   const body = JSON.stringify({ userId: localStorage.getItem('userId') || null })
   const credentials = 'include'

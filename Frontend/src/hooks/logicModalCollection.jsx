@@ -21,7 +21,7 @@ function useHandleMethods ({ setColletions, setOpenModal }) {
       }
     ]))
     setOpenModal(false)
-    const url = 'http://localhost:3000/collections'
+    const url = `${import.meta.env.VITE_API_URL}/collections`
     const method = 'POST'
     const credentials = 'include'
     const body = JSON.stringify({

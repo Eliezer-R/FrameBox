@@ -9,7 +9,7 @@ import { useMethodModal } from './hooks/hooksPageCollection'
 function PageCollection () {
   const { openModal, setOpenModal } = useMethodModal()
   const { collections, setCollections, setAlternate } = useCollectionsContext()
-  const url = 'http://localhost:3000/collections'
+  const url = `${import.meta.env.VITE_API_URL}/collections`
   const method = 'GET'
   const credentials = 'include'
 

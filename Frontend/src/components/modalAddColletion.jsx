@@ -31,7 +31,7 @@ function ModalAddCollection ({ setOpenModal, imgDataClick, collections }) {
     setCollections(newCollections)
     setOpenModal(false)
 
-    const url = 'http://localhost:3000/viewImg'
+    const url = `${import.meta.env.VITE_API_URL}/viewImg`
     const method = 'POST'
     const body = JSON.stringify({
       id_collection: updatedCollection.id_collection,

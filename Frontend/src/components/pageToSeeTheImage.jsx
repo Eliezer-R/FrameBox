@@ -22,7 +22,7 @@ function SeeToImgContent () {
 
   const { useDayUserPublish, handleRemoveCollection } = useLogicSeeToImgContent({ setFilterCollections, filterCollections })
 
-  const url = 'http://localhost:3000/collections'
+  const url = `${import.meta.env.VITE_API_URL}/collections`
   const method = 'GET'
   const credentials = 'include'
 
