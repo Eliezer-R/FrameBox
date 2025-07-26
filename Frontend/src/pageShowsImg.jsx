@@ -35,7 +35,7 @@ function PageShowsImg () {
             {data.length > 0 && data.map((dat) => {
               return (
                 <div className='content-img' key={dat.id} onClick={() => handleClick({ dat })}>
-                  <img src={dat.urls.small} alt='UnsplashImg' className='UnPlashImg' />
+                  <img src={dat.urls.small} alt='UnsplashImg' className='UnPlashImg' loading='lazy'/>
                 </div>
               )
             })}
