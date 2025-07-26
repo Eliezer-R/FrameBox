@@ -1,9 +1,19 @@
 # UnPlashBox
 
 UnPlashBox es una aplicación web desarrollada con **React** en el frontend y **Express** + **MySQL** en el backend. Permite a los usuarios crear colecciones de imágenes, agregar imágenes a sus colecciones y visualizar sus colecciones de manera sencilla y rápida.
-![image1](https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/challenges/59/Search%20-%20Default%20Page/desktop)
 
+![image1](https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/challenges/59/Search%20-%20Default%20Page/desktop)
 ![image1](https://csyxkpbavpcrhwqhcpyy.supabase.co/storage/v1/object/public/challenges/59/Add%20new%20collection/desktop)
+
+---
+
+## 🚀 Deploy
+
+- **Frontend:** Desplegado en [Vercel](https://vercel.com/)
+- **Backend:** Desplegado en [Render](https://render.com/)
+- **Base de datos:** Alojada en [Aiven](https://aiven.io/)
+
+---
 
 ## Estructura del Proyecto
 
@@ -41,6 +51,15 @@ UnPlashBox es una aplicación web desarrollada con **React** en el frontend y **
    pnpm dev
    ```
 6. Accede a la app en [http://localhost:5173](http://localhost:5173).
+
+---
+
+## ⚠️ Problemas conocidos
+
+- **Brave Browser 🦁:**  
+  Hay problemas con el guardado del token (cookie) en el navegador Brave, lo que puede impedir el correcto funcionamiento de la autenticación. En otros navegadores como Chrome, Edge o Firefox, la app funciona correctamente.
+
+---
 
 ## Futuros Cambios y Mejoras
 
