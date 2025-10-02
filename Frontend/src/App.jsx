@@ -5,10 +5,13 @@ import SeeToImgContent from './components/pageToSeeTheImage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import CollectionDetail from './CollectionDetail'
+import BackendWarningToast from './warning'
+
 function App () {
   return (
     <BrowserRouter>
       <Navbar />
+      <BackendWarningToast />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collections' element={<PageCollection />} />
