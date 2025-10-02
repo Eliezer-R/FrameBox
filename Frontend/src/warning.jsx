@@ -8,11 +8,11 @@ export default function BackendWarningToast() {
 
     const fadeTimer = setTimeout(() => {
       setIsExiting(true);
-    }, 5000);
+    }, 6000);
 
     const hideTimer = setTimeout(() => {
       setIsVisible(false);
-    }, 5500);
+    }, 6500);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -241,7 +241,7 @@ export default function BackendWarningToast() {
             <div className="toast-text-content">
               <div className="toast-header">
                 <h3 className="toast-title">
-                  Backend Iniciándose
+                  Espera...
                 </h3>
                 <span style={{ fontSize: '1rem' }}>⚡</span>
               </div>
